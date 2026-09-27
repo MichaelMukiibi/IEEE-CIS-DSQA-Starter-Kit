@@ -1,0 +1,7 @@
+# Built submission zips and downloaded model weights: too large for a normal
+# git push (GitHub rejects anything over 100 MB) and not the kind of thing a
+# source repo should carry anyway. Run each example's build.sh to recreate
+# them locally.
+*.zip
+**/docling_models/
+**/embed_model/
