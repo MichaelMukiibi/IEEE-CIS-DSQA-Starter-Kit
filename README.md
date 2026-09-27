@@ -37,6 +37,14 @@ layout model and the embedding model) and bundles them into the zip — see
 the comments at the top of that script for why, and what to install first
 if you don't already have `docling`/`sentence-transformers` locally.
 
+## Sample questions
+
+[`sample/sample_qa.json`](sample/sample_qa.json) has 25 example question/answer
+pairs across both domains (AI Papers, DONES) — illustrative of the style,
+length, and reasoning expected, not part of either Leaderboard's actual
+question set. [`sample/sites.txt`](sample/sites.txt) lists the source domains
+the whole corpus (real documents and distractors alike) was drawn from.
+
 ## Testing before you submit
 
 The evaluation environment has no internet access, so `AutoModelForCausalLM.from_pretrained(model_id)`
@@ -46,3 +54,7 @@ is plain Python: syntax errors, typos, or `answer()` not returning a string
 are all things you can and should catch on your own machine first, since a
 mistake like that only shows up after your submission has already spent its
 turn in the queue.
+
+## License
+
+[MIT](LICENSE)

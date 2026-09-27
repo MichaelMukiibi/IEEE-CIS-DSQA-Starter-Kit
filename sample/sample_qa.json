@@ -1,0 +1,177 @@
+[
+  {
+    "id": 1,
+    "domain": "DONES",
+    "question": "Both OTR and scintillation are proposed for experimental beam imaging diagnostics, but they produce photons by different mechanisms. Which physical process does scintillation require that OTR does not?",
+    "question_type": "comparative",
+    "answer": "The fundamental difference is **energy deposition**: scintillation requires it, while OTR does not.\n\nOTR is an electromagnetic radiation phenomenon that occurs when a charged particle crosses the boundary (interface) between two media with different dielectric constants. It does not depend on energy deposition into the material or on any luminescent property of the material; it is a purely electromagnetic boundary-condition effect.\n\nScintillation involves the actual deposition of energy from the proton beam into a material (solid or gas), which excites atoms or molecules into higher energy states. These excited states then relax by emitting visible (or near-visible) photons.\n\nIn short, scintillation depends on **energy deposition** (excitation of the material's atoms/molecules), whereas OTR is a purely electromagnetic boundary-crossing effect that involves no energy deposition."
+  },
+  {
+    "id": 2,
+    "domain": "DONES",
+    "question": "What does a \"destructive\" beam diagnostic do to the beam it measures?",
+    "question_type": "factual",
+    "answer": "A \"destructive\" (or \"invasive\") beam diagnostic is a measurement technique that physically intercepts or interferes with the beam during the measurement process. In other words, a destructive diagnostic physically interacts with the beam particles and perturbs the beam being measured. Thus, these diagnostics are not used during normal beam operation of a facility but can be used for commissioning or maintenance."
+  },
+  {
+    "id": 3,
+    "domain": "DONES",
+    "question": "What would be the radioactive decay constant of Be7 if we round its half life in days to the nearest integer?",
+    "question_type": "procedural",
+    "answer": "The half-life of $^7\\text{Be}$ is $T_{1/2} = 53.22$ days (Table 5). Rounding to the nearest integer gives $T_{1/2} = 53$ days.\n\nThe radioactive decay constant $\\lambda$ is related to the half-life by:\n\n$$\\lambda = \\frac{\\ln 2}{T_{1/2}}$$\n\nSubstituting $T_{1/2} = 53$ days:\n\n$$\\lambda = \\frac{0.693147}{53 \\text{ days}} \\approx 0.01308 \\text{ day}^{-1}$$\n\nIf expressed in SI units (per second):\n\n$$\\lambda = \\frac{0.693147}{53 \\times 86400 \\text{ s}} = \\frac{0.693147}{4{,}579{,}200 \\text{ s}} \\approx 1.514 \\times 10^{-7} \\text{ s}^{-1}$$"
+  },
+  {
+    "id": 4,
+    "domain": "DONES",
+    "question": "At what point in time does Be7 stop being the main source of activity in the Heat Exchanger of DONES?",
+    "question_type": "factual",
+    "answer": "Based on the radionuclide evolution plot for the Heat Exchanger (Fig. 8, basic corrosion model), Be-7 remains the most significant contributor to total activity in the heat exchanger for an extended period after shutdown. Examining the figure, Be-7 (with a half-life of approximately 53.22 days) starts at the highest activity level of approximately $10^{12}$ Bq and decays steadily. From the evolution curves in Fig. 8, Be-7 appears to cease being the dominant source of activity at roughly $10^7$ seconds (order of magnitude)."
+  },
+  {
+    "id": 5,
+    "domain": "DONES",
+    "question": "How are the inventories of Be7 and Tritium calculated for DONES Li loop?",
+    "question_type": "causal",
+    "answer": "The inventories of $^7$Be and $^3$H in the DONES lithium loop are calculated using the FISPACT-II activation code, through both deuteron and neutron lithium activation calculations.\n\n**$^7$Be production (deuteron-induced):**\nThe deuteron activation calculation uses an averaged deuteron spectrum calculated in the lithium footprint area ($250\\,\\text{cm}^3$, $128\\,\\text{g}$ of lithium at $\\rho = 0.512\\,\\text{g/cm}^3$) via MCNP6.2, which handles the $d + \\text{Li}$ evaluated cross section data libraries from the McDeLicious-17 package. A total deuteron flux of $5.53 \\times 10^{15}\\,\\text{cm}^{-2}\\text{s}^{-1}$ was obtained. The deuteron spectrum was calculated in the VITAMIN-J+ (211 energy groups) structure and converted by FISPACT-II to the CCFE (162) group structure for use with the TENDL-2017 deuteron activation library. The main production paths are $^6\\text{Li}(d,n)^7\\text{Be}$ (14.5%) and $^7\\text{Li}(d,2n)^7\\text{Be}$ (83.1%). The calculation accounts for $^7$Be decay ($T_{1/2} = 53.1$ days) but not for the planned cold-trap purification system. After 345 days of operation, approximately $150\\,\\text{mg}$ ($1.89 \\times 10^{15}\\,\\text{Bq}$) of $^7$Be is produced.\n\n**$^3$H production (deuteron and neutron-induced):**\nTritium is produced by both $d + \\text{Li}$ and $n + \\text{Li}$ reactions. For neutron-induced production, neutron spectra were calculated via MCNP6.2 in various zones: the lithium channel, inside the nozzle, and the quench tank. Two approaches were used for the nozzle and quench tank: (a) a conservative approach using the maximum neutron flux cell, and (b) an average flux over all lithium cells. The $d + \\text{Li}$ reaction in the footprint volume produces $750\\,\\text{mg}$ of $^3$H, while $n + \\text{Li}$ reactions produce $112\\,\\text{mg}$ in the lithium channel, $180\\,\\text{mg}$ in the nozzle, and $428\\,\\text{mg}$ in the quench tank (conservative estimates). The total $^3$H inventory is approximately $1.47\\,\\text{g}$ (conservative) to $\\sim 1.5\\,\\text{g}$. No trapping of $^3$H is considered.\n\nIn general, the final inventory is a consequence of a balance between production and decay."
+  },
+  {
+    "id": 6,
+    "domain": "DONES",
+    "question": "In the context of IFMIF-DONES, what is the approximate volumetric flow rate in the primary heat exchanger?",
+    "question_type": "procedural",
+    "answer": "We can estimate the volumetric flow rate from the given data. From Table 2, the lithium mass flow rate on the shell side of HX1 is $\\dot{m} = 49.7 \\text{ kg/s}$.\n\nTo convert to volumetric flow rate, we need the density of lithium at the relevant temperatures (250–273 °C). The density of liquid lithium at approximately 250 °C is roughly $\\rho \\approx 505 \\text{ kg/m}^3$.\n\nThe volumetric flow rate can then be estimated as:\n\n$$\\dot{V} = \\frac{\\dot{m}}{\\rho} = \\frac{49.7}{505} \\approx 0.0984 \\text{ m}^3/\\text{s} \\approx 98 \\text{ L/s}$$"
+  },
+  {
+    "id": 7,
+    "domain": "DONES",
+    "question": "What is the temperature of the on-line Nitrogen trap in IFMIF-DONES?",
+    "question_type": "predictive",
+    "answer": "There is not nitrogen on-line trap. The nitrogen hot trap is an off-line one operated at $500$–$600\\,^{\\circ}\\mathrm{C}$ nominal temperature."
+  },
+  {
+    "id": 8,
+    "domain": "DONES",
+    "question": "What is the bypass ratio of the ICS Branch of the DONES Li loop?",
+    "question_type": "procedural",
+    "answer": "The ICS branch bypasses approximately $2\\%$ of the main lithium loop flow. Specifically, the main loop operates at a nominal flow rate of $97.5\\,\\text{l/s}$, while the ICS extracts about $2.015\\,\\text{l/s}$ (with $1.95\\,\\text{l/s}$ going to the purification branch and $0.065\\,\\text{l/s}$ to the monitoring branch)."
+  },
+  {
+    "id": 9,
+    "domain": "DONES",
+    "question": "What will be volumen of the main building in the IFMIF DONES facilities?",
+    "question_type": "procedural",
+    "answer": "For the IFMIF facility, the main building is described as a four-storey rectangular building with dimensions of approximately $137 \\text{ m}$ long, $111 \\text{ m}$ wide, and $40.5 \\text{ m}$ high ($27 \\text{ m}$ above ground level). Based on these dimensions, the total volume of the main building can be calculated as:\n\n$$V = 137 \\text{ m} \\times 111 \\text{ m} \\times 40.5 \\text{ m} = 615883.5 \\text{ m}^3$$\n\nIf we take above ground level, volumen can be calculated as:\n\n$$V' = 137 \\text{ m} \\times 111 \\text{ m} \\times 27 \\text{ m} = 410589 \\text{ m}^3$$"
+  },
+  {
+    "id": 10,
+    "domain": "DONES",
+    "question": "In the context of IFMIF DONES, when would be required hands-on or remote handling maintenance in areas with neutronics activity?",
+    "question_type": "factual",
+    "answer": "Depending on the workloads during maintenance (still in the definition phase) and dose rates, hands-on maintenance is assumed free for areas below 10 μSv/h, and remote handling is directly required for areas above 100 mSv/h."
+  },
+  {
+    "id": 11,
+    "domain": "AI Papers",
+    "question": "In the paper 'OneSearch: A preliminary exploration of the unified end-to-end generative framework for e-commerce search'. Comparing RQ-VAE to RQ-Kmeans as a foundational tokenizer for OneSearch. What architectural property of RQ-Kmeans might explain its superiority over the learned reconstruction objective in RQ-VAE for this discrete tokenization task?",
+    "question_type": "comparative",
+    "answer": "The architectural superiority of RQ-Kmeans lies in its ability to prevent \"hierarchical clustering collapse,\" a common failure in RQ-VAE where the model discards distinctive, fine-grained attributes in favor of global shared features. Unlike the holistically learned reconstruction objective of a VAE, RQ-Kmeans allows developers to prioritize the clustering of prominent features in the initial layers by manually increasing codebook sizes. Furthermore, RQ-Kmeans permits applying balanced k-means selectively to the final layer, ensuring unique identification for similar products without destroying the hierarchical semantic integrity established in the earlier stages."
+  },
+  {
+    "id": 12,
+    "domain": "AI Papers",
+    "question": "In ONB-MACF, is the experimental comparison unfair because the proposed method enforces immutability constraints (via projections) while the baselines do not, and should an ablation without constraint satisfaction therefore be included?",
+    "question_type": "factual",
+    "answer": "The design of the ONB-MACF method includes the use of projections as one of its interesting features, as it allows the counterfactual candidates to avoid using immutable features whenever possible and to reduce the number of feature changes in the explanations. The data representation, as obtained in Algorithm 1, remains the same, independently of the instances to explain, but we use projections to discard balls that would not be able to give us a useful counterfactual explanation (as, if a feature is immutable, there is no option for actionability or recourse for the user). This way, the explanations given by the ONB-MACF method can be both understandable and fair (or, at least, as fair as they can be without changing the model, if it is biased).\n\nOn another note, the comparison against the other methods from the state of the art includes methods already including immutability constraints (such as DiCE, FACE-knn, FACE-epsilon and GS), and eliminating one of the good properties of the ONB-MACF method, that would anyhow be expected from a classification model explainer, would be counterproductive, even though it would make it easier to find counterfactuals and they would most likely be closer, intuitively, due to being able to use previously discarded balls (improving sparsity and similarity, amongst other properties)."
+  },
+  {
+    "id": 13,
+    "domain": "AI Papers",
+    "question": "In the context of properties of lush spaces and applications to Banach spaces with numerical index 1, on Theorem 4.1 \"Let $X$ be a Banach space and le $G \\subset S_{x^*}$ be a norming rounded subset for X. Then the following are equivalent\" , on \n\n(I) X is lush \n\nimply \n\n(II) $_\\mathbb{C}$ For every $x, y \\in S_X$, $n \\in \\mathbb{N}$ and $\\varepsilon > 0$, there exist $\\lambda_1, \\ldots, \\lambda_n \\geq 0$ with $\\sum_{k=1}^{n} \\lambda_k = 1$ and $x_1, \\ldots, x_n \\in B_X$ such that\n\n$$\\left\\| x + \\sum_{k=1}^{n} x_k \\right\\| > n + 1 - \\varepsilon$$\n\n*and*\n\n$$\\left\\| y - \\sum_{k=1}^{n} \\lambda_k \\exp\\left(\\frac{2\\pi i k}{n}\\right) x_k \\right\\| < \\varepsilon + \\frac{2\\pi}{n}$$\n\nWhy can we conclude that $Y$ is lush?",
+    "question_type": "causal",
+    "answer": "The key is that the construction ensures that the set $\\{(x_m, y_m) : m \\in \\mathbb{N}\\}$ is dense in $S_Y \\times S_Y$ and has every element repeated infinitely many times. Specifically, the map $m \\mapsto ((k_{k_m}, j_{k_m}), (k_{j_m}, j_{j_m}))$ is bijective from $\\mathbb{N}$ to $(\\mathbb{N} \\times \\mathbb{N}) \\times (\\mathbb{N} \\times \\mathbb{N})$, so $\\{(x_m, y_m) : m \\in \\mathbb{N}\\} = \\{(a(i,j), a(k,l)) : (i,j,k,l) \\in \\mathbb{N} \\times \\mathbb{N} \\times \\mathbb{N} \\times \\mathbb{N}\\}$, which is dense in $S_Y \\times S_Y$.\n\nBy the construction at step $m$, for the pair $(x_m, y_m)$ and for every $n = 2, \\ldots, m$, there exist $\\lambda_{m,n,1}, \\ldots, \\lambda_{m,n,n} \\geq 0$ with $\\sum_{k=1}^n \\lambda_{m,n,k} = 1$ and $x_{m,n,1}, \\ldots, x_{m,n,n} \\in B_X$ (which lie in $E_{m+1} \\subset Y$) satisfying conditions (4) and (5) of Theorem 4.1(ii) with $\\varepsilon_m = 1/m$. Since each element of the dense set is repeated infinitely many times, for any fixed pair $(x_m, y_m)$ and any fixed $n$, the conditions of Theorem 4.1(ii) are verified with arbitrarily small $\\varepsilon$ (as $m \\to \\infty$ through repetitions). This means item (ii) of Theorem 4.1 holds for all $x, y$ from the fixed dense subset $\\{(x_m, y_m)\\}$ of $S_Y \\times S_Y$, for all $n \\in \\mathbb{N}$, and with arbitrarily small epsilons. By a standard approximation argument (since condition (ii) of Theorem 4.1 is stable under small perturbations of $x$ and $y$, and the pairs are dense), this extends to all $x, y \\in S_Y$, and hence by the equivalence in Theorem 4.1, $Y$ is lush."
+  },
+  {
+    "id": 14,
+    "domain": "AI Papers",
+    "question": "In REVEL framework, the authors say it is very important to have a metric between 0 and 1. Why is this?",
+    "question_type": "causal",
+    "answer": "The authors argue that having metrics well-defined in the interval $[0, 1]$ is important for several interconnected reasons:\n\n**1. Absolute Information, Not Just Comparative:**\nThe authors emphasize that bounded metrics with well-defined limits provide *absolute* information about the quality of an explanation, not merely comparative information. As stated in Section 6: \"having bounded metrics with well-defined limits gives us absolute information on every evaluation aspect and not only a comparative one. This is useful to dismiss explanations by themselves even if there is no baseline to compare with.\" This means a score of, say, $0.95$ on local concordance tells you the explanation is very good in an absolute sense, without needing another explanation to compare against.\n\n**2. Meaningful Extremes:**\nThe authors insist that only the best possible case should achieve $1$ and only the worst possible case should achieve $0$. For example, for local concordance (Equation 7):\n$$\\text{Local\\_Concordance}(g) = 1 - \\frac{|f(x) - g(x)|}{C}$$\nwhere $C$ is the maximum distance between two probability vectors. Using $C$ as the normalization factor ensures the metric achieves $1$ only at maximum concordance and $0$ only at maximum discordance, regardless of the number of classes.\n\n**3. Avoiding Saturation:**\nThe authors criticize prior metrics (like those in the LEAF framework) that suffer from saturation—where multiple different scenarios map to the same extreme score, losing discriminative power. For instance, LEAF's use of the hinge loss function $l(k) = \\max(0, 1-k)$ means that any discordance $\\geq 1$ maps to $0$, even though different levels of discordance beyond that threshold carry meaningfully different information.\n\n**4. Smoothness:**\nThe authors argue the metric should change smoothly from $0$ to $1$, without discontinuities or non-smooth transitions, so that small changes in explanation quality produce proportional changes in the metric score."
+  },
+  {
+    "id": 15,
+    "domain": "AI Papers",
+    "question": "In the paper WinStat. Considering how the window size heuristic is determined based on sequence length: if we have a sequence length of $L=512$, what would be the appropriate window size, $w$?",
+    "question_type": "predictive",
+    "answer": "The paper establishes a practical heuristic for setting the sliding-window length based on a controlled study on the ETT hourly variants. The authors swept $w \\in \\{3, \\ldots, 96\\}$ on ETTh1 and ETTh2 (with sequence length $L = 96$) and found the best ranges fell between $w = 24$ and $w = 36$, corresponding to approximately one quarter to one third of the sequence length. They therefore adopt the rule-of-thumb:\n\n$$w \\in \\left[\\left\\lfloor \\frac{L}{4} \\right\\rfloor, \\left\\lfloor \\frac{L}{3} \\right\\rfloor\\right]$$\n\nFor a sequence length of $L = 512$, applying this heuristic yields:\n\n$$w \\in \\left[\\left\\lfloor \\frac{512}{4} \\right\\rfloor, \\left\\lfloor \\frac{512}{3} \\right\\rfloor\\right] = \\left[128, 170\\right]$$\n\nThus, an appropriate window size would be $w \\in [128, 170]$. A more suitable starting point would be $w = 128$ due to its memory cost ratio, whereas $w = 170$ is preferable if sufficient memory capacity is available, allowing for reduced computation time. On very large or high-frequency datasets, this heuristic may need to be adjusted subject to memory constraints. To address this, the batch size can be lowered to maintain a larger window size. Otherwise, the window size must be capped (like the TINA dataset, where $w = 60$ despite the heuristic suggesting a larger value)."
+  },
+  {
+    "id": 16,
+    "domain": "AI Papers",
+    "question": "In the context of classic fuzzy cognitive maps. Why do relative activation values improve classification accuracy?",
+    "question_type": "causal",
+    "answer": "Relative activation values improve classification accuracy by addressing a fundamental problem caused by the state space shrinking phenomenon in FCMs. As proven in the paper, the feasible activation spaces of neurons progressively shrink during reasoning, meaning that different output neurons end up operating within very different and often non-overlapping subintervals of the nominal activation range.\n\nThe core problem is illustrated by a concrete example in the paper: consider two decision neurons $C_i$ and $C_j$ using a sigmoid activation function, with feasible activation spaces $[0.1, 0.3]$ and $[0.6, 0.9]$, respectively. In the traditional decision-making approach, the class is assigned to the neuron with the highest raw activation value. Since the activation value of $C_i$ will never exceed 0.3, it can never surpass $C_j$'s minimum of 0.6, meaning the class associated with $C_i$ will never be predicted — regardless of the input.\n\nThe relative activation value, defined as:\n$$r_i^{(t)} = \\frac{a_{ji}^{(t)} - inf_i^{(t)}}{sup_i^{(t)} - inf_i^{(t)}}$$\nnormalizes each neuron's activation value within its own estimated bounds $[inf_i^{(t)}, sup_i^{(t)}]$, mapping it to the $[0, 1]$ interval. This normalization makes the decision-making process fairer by comparing how much each neuron is activated relative to its own achievable range, rather than comparing raw values across neurons with incomparable ranges.\n\nBy selecting the class associated with the decision neuron having the highest relative activation value, the classifier can properly distinguish between classes even when their neurons operate in vastly different subintervals. The empirical results confirm this: the enhanced classifier (qrFCM) using relative activation values achieved an average F1 score of 0.74, representing a 37% improvement over the classic FCM model (average F1 of 0.54), and also outperforming the quasi-nonlinear FCM without relative activations (qFCM, average F1 of 0.69)."
+  },
+  {
+    "id": 17,
+    "domain": "AI Papers",
+    "question": "In Dynamic Behavior of Fuzzy Cognitive Maps. Why study the covering for stable FCMs using the knowledge of the weights? Summarize in a small paragraph.",
+    "question_type": "factual",
+    "answer": "Studying the covering for stable FCMs using the knowledge of the weight matrix (via the $\\mathcal{H}_W$ shrink function) is important because it yields the most informative and predictive results about the FCM's behavior. When causal weights are known, the estimated feasible state spaces become significantly more compact and accurate. In particular, FCMs with low connectivity ($\\leq 0.2$) or few neurons ($\\leq 10$) frequently exhibit zero covering, which serves as computational evidence that these models converge to a unique fixed-point attractor regardless of the initial stimulus. This is highly relevant because most real-world FCM models involve small topologies. Moreover, low covering values directly indicate that there exists a vast region of the induced state space that the FCM can never reach, meaning that if desired output values reside in that unreachable region, the model's accuracy will be inherently poor. Thus, computing covering with known weights allows practitioners to peek at the FCM's limitations before running the inference process, potentially notifying experts about the model's reduced representativeness and guiding improvements to the network's design or learning procedure."
+  },
+  {
+    "id": 18,
+    "domain": "AI Papers",
+    "question": "Given the mechanisms attributed to the fairness by brute force phenomenon as described in \"Fairness by Brute Force: Dissatisfaction-Driven Output Modification as De Facto Bias Mitigation in Text-to-Image Generative AI\", is there any model to which, under specific conditions—for example, in a particular profession and in a given iteration or set of iterations—said phenomenon could also be attributed according to the results presented?",
+    "question_type": "factual",
+    "answer": "Yes, the study's results suggest that Grok could be a candidate for the *fairness by brute force* phenomenon under a specific condition, though in a far more limited and transient way than Gemini.\n\nSpecifically, in the **Film camera operator and editor** profession, Grok exhibits behavior that shares structural features with the pattern documented in Gemini. In iteration 1, male representation stands at 80% ($[67.0\\%, 88.8\\%]$ 95% CI), and after the first dissatisfaction prompt (iteration 2), it drops to 52% ($[38.5\\%, 65.2\\%]$), a statistically significant decrease ($p = 0.006$). This 52% value falls within the parity threshold of 40–60% that the paper adopts as its correction standard. That is, in that particular iteration, the system produced a gender distribution approximating parity as a functional result of the user's expressed dissatisfaction.\n\nFurthermore, on the racial dimension for that same profession, Grok shows progressive diversification: white representation decreases from 74% in iteration 1 to 48% in iteration 4, with increases across other racial categories throughout the iterations.\n\nHowever, the paper itself distinguishes this case from the Gemini pattern for two fundamental reasons:\n\n1. **The modification is not sustained**: in iterations 3 and 4, Grok's male representation recovers to 78% and 80% respectively, which the authors describe as \"a transient deviation that self-corrects within the same conversational sequence\" (p. 14). This contrasts with Gemini, where the disruption of the demographic hierarchy persists across multiple iterations.\n2. **The effect is limited to a single profession**: in the other three professions, Grok's Iter1→Iter2 transitions are not significant (all $p > 0.05$).\n\nNevertheless, if we strictly apply the functional definition of *fairness by brute force* proposed by the paper—that is, a de facto mechanism that reduces demographic bias as a functional consequence of expressed dissatisfaction, without being principled, stable, or deliberate—then Grok's behavior in the *Film camera operator and editor* profession at **iteration 2** meets that definition under those specific conditions. The system produces a more balanced output ($\\approx 52\\%$ male) following dissatisfaction, with no evidence of a principled correction mechanism, and the effect is unstable (reverting in subsequent iterations). The four normative insufficiency criteria developed by the authors—belatedness, burden transfer, instability, and cross-system arbitrariness—would apply equally to this particular instance of Grok, reinforcing the notion that this constitutes a localized and ephemeral *fairness by brute force*."
+  },
+  {
+    "id": 19,
+    "domain": "AI Papers",
+    "question": "In WinStat paper. What type of normalized weighting mechanism has been used to adjust the $\\tilde{w}$ weights of the WinStatFlex model to prevent overflow and component dominance? Define it mathematically.",
+    "question_type": "procedural",
+    "answer": "The WinStatFlex model uses a **Softmax normalization** mechanism to adjust the $\\tilde{w}$ weights and prevent overflow and component dominance. Specifically, given raw (unconstrained) learnable weight parameters $w$, the normalized weights are computed as:\n\n$$\\tilde{w} = \\text{Softmax}(w)$$\n\nThis ensures that the resulting weights $\\tilde{w}_0, \\tilde{w}_1, \\tilde{w}_2, \\tilde{w}_3$ are all non-negative and sum to one ($\\sum_i \\tilde{w}_i = 1$). The final representation of WinStatFlex is then given by:\n\n$$X^{final} = \\tilde{w}_0 \\cdot \\tilde{X} + \\tilde{w}_1 \\cdot X^{PE} + \\tilde{w}_2 \\cdot X^{LPE} + \\tilde{w}_3 \\cdot X^{tAPE}$$\n\nwhere $\\tilde{X}$ is the window-statistics-enriched embedding, $X^{PE}$ is the sinusoidal encoding, $X^{LPE}$ is the learnable encoding, and $X^{tAPE}$ is the time-aware absolute positional encoding. The Softmax normalization serves two key purposes: (1) it prevents any single component from dominating the final representation by constraining all weights to a $[0,1]$ range that sums to unity, and (2) it provides stable training dynamics. However, initialization is key, because if the model starts with a condition where one component is dominant at the beginning, it might not recover despite the softmax operation. Therefore, each $\\tilde{w}_i$ value must be initialized to $1/\\text{num\\_components}$.\n\nAs stated in the paper, this normalized weighting scheme is a core architectural component consistently applied across the WinStat family variants."
+  },
+  {
+    "id": 20,
+    "domain": "AI Papers",
+    "question": "In ZeroDiff (solidified visual-semantic correlation in zero-shot learning), what is the purpose of the other Diffusion-based Representation Generator (R)?",
+    "question_type": "causal",
+    "answer": "At the testing stage, we cannot get real unseen class representations r0u and feed to G. Thus, we train another representation generator DRG R to learning the mapping between instance-level SC representations r0 from class-level semantic labels a."
+  },
+  {
+    "id": 21,
+    "domain": "AI Papers",
+    "question": "In the context of method 'ThinkMore' in hierarchical neuro-symbolic search with transformer re-evaluation for efficient chess play. Why are bayesian tests the best way to compare results between 'ThinkMore' options?",
+    "question_type": "factual",
+    "answer": "Bayesian tests are presented as the most appropriate method for comparing ThinkMore configurations due to several key reasons rooted in the nature of the experimental data and the analytical goals:\n\n1. **Discrete outcome structure**: Each puzzle evaluation produces a binary success/failure outcome, making a Bernoulli likelihood the natural modeling choice. The authors explicitly note that \"it is not possible to obtain sufficient unbiased continuous metrics for the application of Bayesian testing,\" meaning classical frequentist tests on continuous distributions would be inappropriate given the data format.\n\n2. **Posterior distribution estimation**: Rather than relying on point estimates of accuracy, Bayesian inference via Monte Carlo sampling approximates full posterior distributions over each model's success probability. This yields both a posterior mean and credible intervals (at significance level $\\alpha = 0.05$), enabling richer comparison than simple accuracy differences. A posterior mean of $0.5$ indicates performance parity with the 270M baseline, while values above $0.5$ quantify the probability that a model outperforms the reference.\n\n3. **Region of Practical Equivalence (ROPE)**: Bayesian analysis naturally supports the concept of practical equivalence through ROPE, defined with threshold $\\epsilon = 0.02$. When the difference in posterior means between ThinkMoreBasic(270M) and a ThinkMoreReeval variant falls below $\\epsilon$, the models are deemed functionally equivalent. An additional approximation margin $\\delta = 2 \\cdot \\epsilon = 0.04$ allows for nuanced conclusions — differences in $[\\epsilon, \\delta]$ indicate approximate but not strict equivalence. This is critical for the paper's central hypothesis: proving that lightweight ThinkMoreReeval models can substitute for the computationally expensive ThinkMoreBasic(270M).\n\n4. **Dual analytical objectives**: The Bayesian framework simultaneously addresses two goals: (a) proving performance improvements over the 270M baseline, and (b) assessing whether ThinkMoreReeval models exhibit approximately equivalent performance to ThinkMoreBasic(270M). Classical hypothesis testing would only address the first goal naturally, whereas the Bayesian ROPE framework elegantly handles equivalence testing.\n\n5. **Statistical robustness with limited data**: The puzzle datasets are relatively small (76, 386, and 209 positions), making Bayesian methods particularly advantageous since they handle uncertainty more gracefully than frequentist approaches with small sample sizes, providing calibrated credible intervals rather than potentially misleading $p$-values."
+  },
+  {
+    "id": 22,
+    "domain": "AI Papers",
+    "question": "In SimCLR's paper, what is the main weakness of using a single fixed data augmentation?",
+    "question_type": "predictive",
+    "answer": "That no single transformation suffices. The paper shows that no single augmentation operation is sufficient to learn good representations, even though the model can almost perfectly identify positive pairs in the contrastive task. This means fixed, non-composed augmentations lead to trivial contrastive tasks that do not produce useful representations."
+  },
+  {
+    "id": 23,
+    "domain": "AI Papers",
+    "question": "In the context of federated learning, what are the differences between $(\\alpha,f)$-byzantine resilience method and other approaches?",
+    "question_type": "comparative",
+    "answer": "The $(\\alpha, f)$-Byzantine resilience framework and other robust aggregation approaches differ in several fundamental ways:\n\n**Theoretical Framework:**\nThe $(\\alpha, f)$-Byzantine resilience (Definition 1) provides a formal guarantee that, given $f$ Byzantine vectors among $n$ total updates, the expected output of the aggregation rule deviates no more than an angle $\\alpha \\in [0, \\frac{\\pi}{2}]$ from the true gradient $g$. Specifically, it requires two conditions: (i) $\\langle \\mathbb{E}F, g \\rangle \\geq (1 - \\sin \\alpha)\\|g\\|^2$, and (ii) bounded higher moments $\\mathbb{E}\\|F\\|^r$ for $r \\in \\{2, 3, 4\\}$. This framework enables direct comparison between rules through their respective $\\alpha$ and $f$ values, providing a unified theoretical lens. The second condition is specifically required to transfer the convergence dynamics of SGD to the aggregation rule.\n\n**Rules within the framework:**\nKrum, Bulyan, and GeoMed all operate within or are closely associated with this framework. Krum selects the update minimizing $s(i) = \\sum_{i \\to j} \\|V_i - V_j\\|^2$ and is proven Byzantine resilient when $f < \\frac{n}{2} - 1$. Bulyan extends Krum with a two-phase process (Krum selection followed by coordinate-wise trimmed mean). GeoMed approximates the geometric median by selecting the medoid, and while not formally proven to satisfy $(\\alpha, f)$-resilience, it is commonly treated as such.\n\n**Other approaches outside the framework:**\nSeveral prominent robust aggregation methods operate under different theoretical frameworks entirely:\n- **Trimmed Mean** uses coordinate-wise trimming of extreme values\n- **FLTrust** employs trust bootstrapping using a server-side root dataset\n- **SignGuard** uses collaborative malicious gradient filtering\n- **SDEA** uses self-driven entropy aggregation for heterogeneous settings\n\nThe main difference is that $(\\alpha, f)$-Byzantine Resilience is a family of methods that can be tackled from a common theoretical perspective. Whether a method belongs to this family or not do not imply itself better performance, robustness nor the opposite. Other methods like FLTrust or Trimmed mean can be as competitive as this methods. The paper focus on the (\\alpha, f)-Byzantine Resilient family since any result would instantly apply to a wide range of popular methods, not because of special behavior of said family."
+  },
+  {
+    "id": 24,
+    "domain": "AI Papers",
+    "question": "According to the taxonomy and definition framework of \"General Purpose Artificial Intelligence Systems: Definition and Taxonomy\", what specific capability would an open-world GPAIS gain by incorporating active learning that would move it closer to being classified as an 'advanced GPAIS,' in terms of the supervision mechanism described for handling new tasks at time $t + \\Delta t$?",
+    "question_type": "predictive",
+    "answer": "Active learning would allow open-world GPAIS to acknowledge their own limitations and ask the user/expert for further clarification. This relates directly with the open world and new tasks at time t+ increment of t as when a new task comes and the system does not know how to answer or it is unsure, it recognises its own weakness and look for that clarification."
+  },
+  {
+    "id": 25,
+    "domain": "AI Papers",
+    "question": "In the paper of Mamba, why Linear Time Invariance models struggle with selective Copying?",
+    "question_type": "causal",
+    "answer": "The static convolution kernel cannot adapt to the variable spacing of the tokens."
+  }
+]
