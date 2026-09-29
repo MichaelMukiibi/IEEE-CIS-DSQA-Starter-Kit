@@ -37,6 +37,13 @@ layout model and the embedding model) and bundles them into the zip — see
 the comments at the top of that script for why, and what to install first
 if you don't already have `docling`/`sentence-transformers` locally.
 
+## Environment
+
+[`requirements-participant.txt`](requirements-participant.txt) lists every
+package pre-installed in the evaluation environment, pinned to the exact
+version running there. There is no internet access at submission time, so
+anything not on that list can't be used.
+
 ## Sample questions
 
 [`sample/sample_qa.json`](sample/sample_qa.json) has 25 example question/answer
