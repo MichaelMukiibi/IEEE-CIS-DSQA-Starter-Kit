@@ -5,3 +5,9 @@
 *.zip
 **/docling_models/
 **/embed_model/
+.venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+results/
+corpus/

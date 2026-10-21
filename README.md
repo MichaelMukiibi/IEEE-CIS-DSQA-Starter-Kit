@@ -62,6 +62,13 @@ are all things you can and should catch on your own machine first, since a
 mistake like that only shows up after your submission has already spent its
 turn in the queue.
 
+## Colab experiments
+
+See [the workflow](docs/workflow.md) and
+[`notebooks/baseline_colab.ipynb`](notebooks/baseline_colab.ipynb) for gated GPU
+experiments, CPU-only checks, result recording and submission packaging.
+The organizer baseline directories remain unchanged.
+
 ## License
 
 [MIT](LICENSE)
